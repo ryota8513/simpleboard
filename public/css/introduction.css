@@ -1,0 +1,164 @@
+/*body{*/
+/*      background-image:url("wood.png");*/
+/*      width:100%;*/
+/*      height:400px;*/
+   
+      /*background-size:300px;*/
+   
+    
+      /*margin:30px 30px;*/
+/*}*/
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: block;
+}
+
+ul{
+    list-style:none;
+    /*display:block;*/
+}
+body{
+    margin:0 auto;
+    width:100%;
+    height:100%;
+}
+
+header{
+    /*display:inline-block;*/
+    /*display:block;*/
+    background-image:url(bg.jpg);
+    width: 100%;
+    height:110vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position:relative;
+    vertical-align:bottom;
+    /*vertical-align:top;*/
+    
+}
+
+/*.container{*/
+    /*width:100%;*/
+    /*height:700px;*/
+    /*background-image:url("wood.png");*/
+/*    background-image:url(bg.jpg);*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    background-size: cover;*/
+/*     background-repeat: no-repeat;*/
+/*}*/
+
+/*.header-right{*/
+/*    float:right;*/
+/*    margin-right:100px;*/
+/*    margin-top:-400px;*/
+/*}*/
+
+/*.gnav li{*/
+    /*display:inline-block;*/
+/*    float:left;*/
+/*    padding-right:15px;*/
+/*    font-size:25px;*/
+/*}*/
+
+.header h1{
+   font-size:50px;
+   color:white;
+   margin:0 auto;
+}
+
+#menu img{
+    border:5px solid #fff;
+    width:250px;
+    float:left;
+    margin-right:20px;
+    border-radius:10%;
+}
+
+/*.menu{*/
+/*    display:inline block;*/
+/*    position:relative;*/
+/*}*/
+/*.main{*/
+/*     position:relative;*/
+/*}*/
+/*.about{*/
+/*    position:relative;*/
+/*    display:inline-block;*/
+    /*float:right;*/
+/*}*/
+
+#menu li{
+     width: 25%;
+     max-width: 500px;
+    /*animation-duration: 1.5S;*/
+    /*animation-fill-mode: both;*/
+    /*animation-timing-function: ease-in-out;*/
+    /*border: 10px solid #fff;*/
+    /*box-shadow: 2px 2px 5px #b52654;*/
+    /*position: absolute;*/
+    /*background: #000;*/
+    text-align: center;
+    /*transition: 0.2s;*/
+}
+
+#about span{
+    position:absolute;
+    left:20px;
+    top:70px;
+}
+
+
+
+#menu a span{
+    position: absolute;
+    /*bottom: 0px;*/
+    /*left: 0px;*/
+    width: 50%;
+    font-size: 30px;
+    color: #fff;
+    background: #000;
+    background: rgba(0,0,0,0.6);
+
+}
+
+#work{
+    position:absolute;
+}
+
+#work a span{
+     position:absolute;
+     left:50px;
+     bottom:10px;
+}
+
+#contact span {
+    position:absolute;
+    left:20px;
+    top:70px;
+    
+}
+
+.inner{
+    text-align:center;
+}
+.photo{
+    border-radius:50%;
+    width:200px;
+    height:150px;
+}
+
+.contants{
+    /*margin-top:20px;*/
+    height:800px;
+    background-color:#dcdcd8;;
+}
+
+.contants1{
+     height:800px;
+     background-color:pink;
+}
