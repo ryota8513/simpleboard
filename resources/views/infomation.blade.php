@@ -18,7 +18,8 @@
     <div class="container">
         <div class="info">
      
-    <form name="form1">
+    <form name="form1" method="POST" action='/questions'>
+        {{ csrf_field() }}
        <h1>名前</h1>
        <input class="search" name="name" type="text" placeholder="氏名入力">
        

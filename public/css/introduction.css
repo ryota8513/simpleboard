@@ -1,21 +1,3 @@
-/*body{*/
-/*      background-image:url("wood.png");*/
-/*      width:100%;*/
-/*      height:400px;*/
-   
-      /*background-size:300px;*/
-   
-    
-      /*margin:30px 30px;*/
-/*}*/
-
-a:hover {
-  color: red;
-}
-
-a:active {
-  color: block;
-}
 
 ul{
     list-style:none;
@@ -23,6 +5,7 @@ ul{
 }
 body{
     margin:0 auto;
+    padding:0;
     width:100%;
     height:100%;
 }
@@ -30,135 +13,129 @@ body{
 header{
     /*display:inline-block;*/
     /*display:block;*/
-    background-image:url(bg.jpg);
+    background-image:url('image/bg.jpg');
     width: 100%;
     height:110vh;
+    padding-top:30px;
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
-    vertical-align:bottom;
-    /*vertical-align:top;*/
+    /*vertical-align:bottom;*/
     
 }
 
-/*.container{*/
-    /*width:100%;*/
-    /*height:700px;*/
-    /*background-image:url("wood.png");*/
-/*    background-image:url(bg.jpg);*/
-/*    width: 100vw;*/
-/*    height: 100vh;*/
-/*    background-size: cover;*/
-/*     background-repeat: no-repeat;*/
-/*}*/
 
-/*.header-right{*/
-/*    float:right;*/
-/*    margin-right:100px;*/
-/*    margin-top:-400px;*/
-/*}*/
-
-/*.gnav li{*/
-    /*display:inline-block;*/
-/*    float:left;*/
-/*    padding-right:15px;*/
-/*    font-size:25px;*/
-/*}*/
-
-.header h1{
-   font-size:50px;
-   color:white;
-   margin:0 auto;
-}
-
-#menu img{
-    border:5px solid #fff;
-    width:250px;
-    float:left;
-    margin-right:20px;
-    border-radius:10%;
-}
-
-/*.menu{*/
-/*    display:inline block;*/
-/*    position:relative;*/
-/*}*/
-/*.main{*/
-/*     position:relative;*/
-/*}*/
-/*.about{*/
-/*    position:relative;*/
-/*    display:inline-block;*/
-    /*float:right;*/
-/*}*/
-
-#menu li{
-     width: 25%;
-     max-width: 500px;
-    /*animation-duration: 1.5S;*/
-    /*animation-fill-mode: both;*/
-    /*animation-timing-function: ease-in-out;*/
-    /*border: 10px solid #fff;*/
-    /*box-shadow: 2px 2px 5px #b52654;*/
-    /*position: absolute;*/
-    /*background: #000;*/
-    text-align: center;
-    /*transition: 0.2s;*/
-}
-
-#about span{
-    position:absolute;
-    left:20px;
-    top:70px;
-}
-
-
-
-#menu a span{
-    position: absolute;
-    /*bottom: 0px;*/
-    /*left: 0px;*/
-    width: 50%;
-    font-size: 30px;
-    color: #fff;
-    background: #000;
-    background: rgba(0,0,0,0.6);
+.contants{
+    width:100%;
+    height:800px;
+    background-color:#FDF5E6;
+    text-align:center;
 
 }
-
-#work{
-    position:absolute;
-}
-
-#work a span{
-     position:absolute;
-     left:50px;
-     bottom:10px;
-}
-
-#contact span {
-    position:absolute;
-    left:20px;
-    top:70px;
-    
-}
-
 .inner{
+    width:100%;
+    /*background-color:pink;*/
+    /*margin:0 auto;*/
+}
+.contants1{
+    width:100%;
+    height:800px;
+    background-color:#FAEBD7;
     text-align:center;
 }
+.inner1{
+    width:100%;
+    height:400px;
+    /*background-color:pink;*/
+}
+.works{
+   
+     height:300px;
+     width:100%;
+     margin-top:170px;
+     
+}
 .photo{
-    border-radius:50%;
-    width:200px;
+    /*padding-right:15px;*/
+    margin-top:30px; 
+}
+.works li{
+    float:left;
+    margin-left:110px;
+}
+.photo  img{
+    width:50px;
+    height:100px;
+}
+
+.contants2{
+    width:100%;
+    height:800px;
+    
+    /*background-color:pink;*/
+}
+
+.info{
+    background-color:pink;
+    width:100%;
+    height:px;
+    padding-top:20px;
+}
+.info h1{
+    text-align:center;
+}
+.info ul{
+    width:800px;
+    height:500px;
+    margin:0 auto;
+    margin-top:100px;
+    background-color:#FDF5E6;
+}
+.info ul li{
+    padding-bottom:15px;
+}
+.fas{
+    font-size:20px;
+    margin-left:30px;
+}
+/*.info ul .search{*/
+    
+/*}*/
+.search{
+    margin-left:120px;
+}
+textarea{
+    resize: none;
+    width:400px;
     height:150px;
 }
 
-.contants{
-    /*margin-top:20px;*/
-    height:800px;
-    background-color:#dcdcd8;;
+
+#work{
+    position:relative;
 }
 
-.contants1{
-     height:800px;
-     background-color:pink;
+#work img{
+    /*display:inline-block;*/
+    width:300px;
+    height:100px;
+    
+    
 }
+
+#work span{
+    position:absolute;
+    left:20px;
+    bottom:10px;
+    color:white;
+    background: #000;
+    background: rgba(0,0,0,0.6);
+}
+
+
+
+footer{
+    text-align:center;
+}
+
+
