@@ -25,6 +25,7 @@
         <th>問い合わせ</th><br>
        </tr>
     
+       <!--Gitの練習-->
         @foreach($questions as $question)
         <tr>
          <td>{{$question->id}}</td>
@@ -33,7 +34,7 @@
          <td>{{$question->age}}</td>
          <td>{{$question->gender}}</td>
          <td>{{$question->message}}</td><br>
-         <button type="submit">更新</button>
+         <button type="submit">更新2</button>
         </tr>
         @endforeach 
      </form>   
