@@ -21,6 +21,12 @@ Route::get('introduction','HelloController@into');
 Route::get('infomation','HelloController@info');
 Route::post('questions', 'HelloController@store');
 Route::get('list','HelloController@lists');
+Route::get('edit', 'HelloController@edit');
+Route::post('edit', 'HelloController@edit');
+
+//検索
+// Route::get('find','HelloController@find');
+// Route::post('find','HelloController@search');
 
 
  if (env('APP_ENV') === 'local') {

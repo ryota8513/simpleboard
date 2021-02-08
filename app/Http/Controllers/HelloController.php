@@ -14,9 +14,11 @@ public function into(){
 }
 
 public function info(){
-  return view('infomation');
+    
+    return view('infomation');
 }
 
+//storeでデータ保存
 public function store(Request $request)
     {
         $question=new question();
@@ -26,21 +28,64 @@ public function store(Request $request)
         $question->gender=$request->gender;
         $question->message=$request->message;
         $question->save();
-        return redirect('infomation');
+        return redirect('infomation'); 
+        // $form=$request->all();
+        // unset($form['_token']);
 }
-
 
 
   //all();でテーブルないとデータを全て取得　
   //$dateにテーブルのquestionsを代入
   //viewでRouteのlistを定義して、$dateでquestionsのテーブル中身を表示させる
-
+  
+//list一覧表示
 public function lists(){
     $questions = question ::all();
     $date=['questions'=>$questions];
     return view('list',$date);
 }
 
+//検索フォーム
+// public function find(Request $request){
+//     return view('find',['input'=>'']);
+// }
+// public function search(Request $request){
+//     $question = question ::find($request->input);
+//     $param =['input' => $request->input,'question'=>$questions];
+//     return view('question.find',$param);
+// }
+public function edit(){
+    return view('edit');
+}
+// public function edit($id){
+//     $questions=question::find($id);
+//     return view('edit');
+// }
+
+
+
+// public function edit(Request $request){
+//     $question=question ::find($request->id);
+//         $question->name=$request->name;
+//         $question->email=$request->email;
+//         $question->age=$request->age;
+//         $question->gender=$request->gender;
+//         $question->message=$request->message;
+//         $question->save();
+//     return view('edit');
+// }
+
+// public function update(ItemRequest $request){
+//         $questions = question::findOrFail($id);
+//         $questions ->fill(['name'=>$request->name]);
+//         $questions ->fill(['email'=>$request->email]);
+//         $questions ->fill(['age'=>$request->age]);
+//         $questions ->fill(['gender'=>$request->gender]);
+//         $questions ->fill(['message'=>$request->message]);
+//         $questions ->save();
+//         return redirect(('edit'),['id'=>$id]);
+// }
+        
 // public function edit($id){
 //     $questions = question ::find($id);
 //     // if(is_null($questions)){

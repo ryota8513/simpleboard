@@ -13,7 +13,7 @@
     </style>
  </head>
   <table>
-       <form name="form1" method="POST" action='infomation'>
+       <form name="form1" method="POST" action="edit">
         {{ csrf_field() }}
        
        <tr>
