@@ -17,14 +17,18 @@
 
 
 Route::get('introduction','HelloController@into');
-
-Route::get('infomation','HelloController@info');
-Route::post('questions', 'HelloController@store');
+//一覧表示
 Route::get('list','HelloController@lists');
-Route::get('edit', 'HelloController@edit');
-Route::post('edit', 'HelloController@edit');
 
-//検索
+//追加
+Route::get('infomation','HelloController@add');
+Route::post('questions', 'HelloController@create');
+
+//更新
+Route::get('edit', 'HelloController@edit');
+Route::post('edit', 'HelloController@update');
+
+//検索フォーム
 // Route::get('find','HelloController@find');
 // Route::post('find','HelloController@search');
 

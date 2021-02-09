@@ -13,22 +13,25 @@ public function into(){
   return view('introduction');
 }
 
-public function info(){
+public function add(){
     
     return view('infomation');
 }
 
 //storeでデータ保存
-public function store(Request $request)
+public function create(Request $request)
     {
+        // $this -> validate($request,question ::$rules);
         $question=new question();
         $question->name=$request->name;
         $question->email=$request->email;
         $question->age=$request->age;
         $question->gender=$request->gender;
         $question->message=$request->message;
+        // $form = $request->all();
+        // $question->fill($form)->save();
         $question->save();
-        return redirect('infomation'); 
+        return redirect('question'); 
         // $form=$request->all();
         // unset($form['_token']);
 }
@@ -54,9 +57,9 @@ public function lists(){
 //     $param =['input' => $request->input,'question'=>$questions];
 //     return view('question.find',$param);
 // }
-public function edit(){
-    return view('edit');
-}
+// public function edit(){
+//     return view('edit');
+// }
 // public function edit($id){
 //     $questions=question::find($id);
 //     return view('edit');
@@ -64,27 +67,27 @@ public function edit(){
 
 
 
-// public function edit(Request $request){
-//     $question=question ::find($request->id);
-//         $question->name=$request->name;
-//         $question->email=$request->email;
-//         $question->age=$request->age;
-//         $question->gender=$request->gender;
-//         $question->message=$request->message;
-//         $question->save();
-//     return view('edit');
-// }
-
-// public function update(ItemRequest $request){
-//         $questions = question::findOrFail($id);
-//         $questions ->fill(['name'=>$request->name]);
-//         $questions ->fill(['email'=>$request->email]);
-//         $questions ->fill(['age'=>$request->age]);
-//         $questions ->fill(['gender'=>$request->gender]);
-//         $questions ->fill(['message'=>$request->message]);
-//         $questions ->save();
-//         return redirect(('edit'),['id'=>$id]);
-// }
+public function edit(Request $request){
+    $question=question ::find($request->id);
+        // $question->name=$request->name;
+        // $question->email=$request->email;
+        // $question->age=$request->age;
+        // $question->gender=$request->gender;
+        // $question->message=$request->message;
+        // $question->save();
+    return view('edit',['form'=>$question]);
+}
+//更新
+public function update(Request $request){
+        $questions = question::find($id);
+        $question->name=$request->name;
+        $question->email=$request->email;
+        $question->age=$request->age;
+        $question->gender=$request->gender;
+        $question->message=$request->message;
+        $questions ->save();
+        return redirect('question');
+}
         
 // public function edit($id){
 //     $questions = question ::find($id);

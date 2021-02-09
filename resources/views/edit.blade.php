@@ -20,21 +20,21 @@
     <div class="container">
         <div class="info">
      
-    <form name="form1" method="POST" action="questions">
+    <form name="form1" method="POST" action="edit">
     {{ csrf_field() }}
-      
+     
        <h1>名前</h1>
-       <input class="search" name="name" type="text" placeholder="氏名入力">
+       <input class="search" name="name" type="text" placeholder="氏名入力" value="{{$question->name}}" >
        
        <h1>メールアドレス</h1>
-       <input class="search" name="email" type="text" placeholder="info@email.com">
+       <input class="search" name="email" type="text" placeholder="info@email.com" value="{{$question->email}}">
        
        <h1>年齢</h1>
-       <input class="search" name="age" type="text" placeholder="年齢">
+       <input class="search" name="age" type="text" placeholder="年齢"value="{{$question->age}}">
     
        <h1>性別</h1>
-       <input class="search" type="radio" name="gender" value="男" /> 男　
-　　　 <input class="search" type="radio" name="gender" value="女" /> 女
+       <input class="search" type="radio" name="gender" value="男" /value="{{$question->gender}}"> 男　
+　　　 <input class="search" type="radio" name="gender" value="女" /value="{{$question->gender}}"> 女
        
        <h1>問合内容</h1>
        <textarea   placeholder="お問い合わせ内容を入力して下さい" name="message"></textarea>
