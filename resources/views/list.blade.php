@@ -12,7 +12,7 @@
     }
     </style>
  </head>
-  <table>
+     <table>
        <form name="form1" method="POST" action="edit">
         {{ csrf_field() }}
        
@@ -24,8 +24,7 @@
         <th>性別</th>
         <th>問い合わせ</th><br>
        </tr>
-    
-       <!--Gitの練習-->
+ 
         @foreach($questions as $question)
         <tr>
          <td>{{$question->id}}</td>
@@ -34,10 +33,18 @@
          <td>{{$question->age}}</td>
          <td>{{$question->gender}}</td>
          <td>{{$question->message}}</td><br>
-         <button type="submit">更新2</button>
         </tr>
         @endforeach 
-     </form>   
+        <input type="text" name="id" >
+        <button type="submit">編集</button>
+       </form> 
+       
+       <form name="form2" method="POST" action="delete">
+         {{ csrf_field() }}
+        <input type="text" name="id" >
+        <button type="submit">削除</button>
+       </form>
+       
      </tabley>
 
 </html>

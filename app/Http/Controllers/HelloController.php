@@ -14,30 +14,23 @@ public function into(){
 }
 
 public function add(){
-    
     return view('infomation');
 }
 
 //storeでデータ保存
-public function create(Request $request)
-    {
-        // $this -> validate($request,question ::$rules);
-        $question=new question();
-        $question->name=$request->name;
-        $question->email=$request->email;
-        $question->age=$request->age;
-        $question->gender=$request->gender;
-        $question->message=$request->message;
-        // $form = $request->all();
-        // $question->fill($form)->save();
-        $question->save();
-        return redirect('question'); 
-        // $form=$request->all();
-        // unset($form['_token']);
+public function create(Request $request){
+        $questions=new question();
+        $questions->name=$request->name;
+        $questions->email=$request->email;
+        $questions->age=$request->age;
+        $questions->gender=$request->gender;
+        $questions->message=$request->message;
+        $questions->save();
+        return redirect('infomation'); 
 }
 
 
-  //all();でテーブルないとデータを全て取得　
+  //all();でテーブル内データを全て取得　
   //$dateにテーブルのquestionsを代入
   //viewでRouteのlistを定義して、$dateでquestionsのテーブル中身を表示させる
   
@@ -45,6 +38,7 @@ public function create(Request $request)
 public function lists(){
     $questions = question ::all();
     $date=['questions'=>$questions];
+    // $question=question ::find($request->id);
     return view('list',$date);
 }
 
@@ -57,45 +51,54 @@ public function lists(){
 //     $param =['input' => $request->input,'question'=>$questions];
 //     return view('question.find',$param);
 // }
-// public function edit(){
-//     return view('edit');
-// }
-// public function edit($id){
-//     $questions=question::find($id);
-//     return view('edit');
-// }
 
-
+//compactを使用する時はbladeと名前を同じにする
+//findはプライマリーキーで検索している
 
 public function edit(Request $request){
-    $question=question ::find($request->id);
-        // $question->name=$request->name;
-        // $question->email=$request->email;
-        // $question->age=$request->age;
-        // $question->gender=$request->gender;
-        // $question->message=$request->message;
-        // $question->save();
-    return view('edit',['form'=>$question]);
+    $questions=question ::find($request->id);
+        return view('edit',compact('questions'));
 }
+
 //更新
+//redirectはRouteを呼び出す
 public function update(Request $request){
-        $questions = question::find($id);
-        $question->name=$request->name;
-        $question->email=$request->email;
-        $question->age=$request->age;
-        $question->gender=$request->gender;
-        $question->message=$request->message;
+        // dd($request);
+        $questions = question::find($request->id);
+        $questions->name=$request->name;
+        $questions->email=$request->email;
+        $questions->age=$request->age;
+        $questions->gender=$request->gender;
+        $questions->message=$request->message;
         $questions ->save();
-        return redirect('question');
+        return redirect('list');
 }
-        
-// public function edit($id){
-//     $questions = question ::find($id);
-//     // if(is_null($questions)){
-//     //     return redirect('');
-//     // }
-//     return view('edit',['question'=>$questions]);
-// }
+
+//削除
+public function delete(Request $request){
+    $questions = question::find($request->id);
+    return view('delete',compact('questions'));
+}
+
+public function remove(Request $request){
+        $questions = question::find($request->id)->delete();
+        // $questions->name=$request->name;
+        // $questions->email=$request->email;
+        // $questions->age=$request->age;
+        // $questions->gender=$request->gender;
+        // $questions->message=$request->message;
+        // $questions ->save();
+     return redirect('list');
+}
+
+
+
+
+
+
+
+
+
 
 //特定の物を見つける時にしよう　find();1
 // public function lists(){

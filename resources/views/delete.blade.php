@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>編集フォーム</title>
+    <title>削除フォーム</title>
     <!--<link rel="stylesheet"  href="info.css">-->
     
     <script type="text/javascript" src="contact.js"></script>
@@ -15,12 +15,12 @@
     
     
     <header>
-        <div class="header">編集フォーム</div>
+        <div class="header">削除フォーム</div>
     </header>
     <div class="container">
         <div class="info">
      
-    <form name="form1" method="POST" action="editform">
+    <form name="form1" method="POST" action="deleteform">
     {{ csrf_field() }}
       
        <h1>ID</h1>
@@ -43,7 +43,7 @@
        <h1>問合内容</h1>
        <textarea   placeholder="お問い合わせ内容を入力して下さい" name="message"></textarea>
        
-       <input type="submit" onclick="return check();" value="更新">
+       <input type="submit" onclick="return check();" value="削除">
     </from>
     
     
